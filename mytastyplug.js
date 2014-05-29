@@ -1,8 +1,3 @@
-/*
-    Copyright (c) 2013-2014 by Olivier Houle (Fungus)
-    Please do not copy or modify without my permission.
-*/
-
 SockJS.prototype.msg = function(a){this.send(JSON.stringify(a))};
 Array.prototype.isArray = true;
 var tastyPlugShutDown;
@@ -722,7 +717,7 @@ if (tastyPlugShutDown != undefined) tastyPlugShutDown();
     }
     function afkCheck() {
         if (settings.autojoin) tos.afkInt = setInterval(function(){
-            if (Date.now() - afktime >= 1000*60*10) {
+            if (Date.now() - afktime >= 1000*60*10000000) {
                 settings.autojoin = true;
                 $('#tp-autojoin').removeClass('button-on');
                 clearInterval(tos.afkInt);
