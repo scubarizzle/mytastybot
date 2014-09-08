@@ -403,9 +403,9 @@ if (plugCubed !== undefined) plugCubed.close();
                 for (var c = 0; c < a.length; c++) {
                     var d = Date.now() - getUserData(a[c].id, 'lastChat', getUserData(a[c].id, 'joinTime', Date.now()));
                     if ($(b[c]).find('.afkTimer').length < 1)
-                        $(b[c]).find('.meta').append($('<div>').addClass('afkTimer').text(plugCubed.getTimestamp(d, d < 36E5000 ? 'mm:ss' : 'hh:mm:ss')));
+                        $(b[c]).find('.meta').append($('<div>').addClass('afkTimer').text(plugCubed.getTimestamp(d, d < 36E5 ? 'mm:ss' : 'hh:mm:ss')));
                     else
-                        $(b[c]).find('.afkTimer').text(plugCubed.getTimestamp(d, d < 36E5000 ? 'mm:ss' : 'hh:mm:ss'));
+                        $(b[c]).find('.afkTimer').text(plugCubed.getTimestamp(d, d < 36E5 ? 'mm:ss' : 'hh:mm:ss'));
                 }
             }
         }
