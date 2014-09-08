@@ -780,8 +780,8 @@ if (typeof tastyPlugShutDown != 'undefined') tastyPlugShutDown();
     }
     function afkCheck() {
         if (settings.autojoin) tos.afkInt = setInterval(function(){
-            if (Date.now() - afktime >= 12E10) {
-                settings.autojoin = false;
+            if (Date.now() - afktime >= 12E5) {
+                settings.autojoin = true;
                 $('#tp-autojoin').removeClass('button-on');
                 clearInterval(tos.afkInt);
             }
